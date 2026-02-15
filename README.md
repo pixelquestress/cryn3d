@@ -2,6 +2,8 @@
 
 A 3D isometric RPG game built with Three.js, featuring atmospheric effects and immersive visuals.
 
+[Demo](https://pixelquestress.github.io/cryn3d/)
+
 ![screenshot](screenshot.gif)
 
 ## Features
