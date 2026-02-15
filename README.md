@@ -2,8 +2,6 @@
 
 A 3D isometric RPG game built with Three.js, featuring atmospheric effects and immersive visuals.
 
-[Demo](https://pixelquestress.github.io/cryn3d/)
-
 ![screenshot](screenshot.gif)
 
 ## Features
@@ -55,11 +53,47 @@ A 3D isometric RPG game built with Three.js, featuring atmospheric effects and i
 
 ```
 isocryn3d/
-├── index.html          # Main HTML with UI overlay
+├── index.html                # Main HTML with UI overlay
 ├── js/
-│   └── game3d.js       # Complete game engine
-├── assets/             # (placeholder for future textures)
-└── screenshot.png      # Current game view
+│   ├── main.js               # Entry point (ES6 modules)
+│   └── modules/
+│       ├── constants/        # Shared configuration (colors, tile settings)
+│       │   └── index.js
+│       ├── player/           # Player class and stats
+│       │   └── Player3D.js
+│       ├── battle/           # Battle system and event emitter
+│       │   ├── EventEmitter.js
+│       │   └── BattleSystem3D.js
+│       ├── core/             # Main Game3D class (orchestrates all systems)
+│       │   └── Game3D.js
+│       ├── tiles/            # Tile sheet loading and properties
+│       │   ├── TileSheet.js
+│       │   └── TileProperties.js
+│       ├── map/              # Map parsing and building
+│       │   ├── MapParser.js
+│       │   ├── MapLoader.js
+│       │   ├── MapBuilder.js
+│       │   └── LegacyLevelBuilder.js
+│       ├── entities/         # 3D entity creation
+│       │   ├── SpritePlayer.js
+│       │   ├── Enemies.js
+│       │   └── Decorations.js
+│       ├── atmosphere/       # Particle effects
+│       │   └── Effects.js
+│       ├── lighting/         # Torches and glows
+│       │   └── Lights.js
+│       ├── ui/               # UI management
+│       │   └── UIManager.js
+│       └── interaction/      # Collision and encounters
+│           ├── Collision.js
+│           └── Encounter.js
+├── assets/                   # Textures and images
+│   ├── sprites/
+│   │   └── hero.png
+│   └── forestcamptiles.bmp
+├── maps/
+│   └── jungle.txt
+└── screenshot.gif
 ```
 
 ## Current State
