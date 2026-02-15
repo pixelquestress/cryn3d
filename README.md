@@ -2,6 +2,8 @@
 
 A 3D isometric RPG game built with Three.js, featuring atmospheric effects and immersive visuals.
 
+![screenshot](screenshot.gif)
+
 ## Features
 
 - **Full 3D Isometric Rendering** using Three.js
